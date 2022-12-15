@@ -1,7 +1,11 @@
 from django.urls import path
 
-from .views import ViewLocalization
+from .views import LocalizationView
 
 urlpatterns = [
-    path('localization/', ViewLocalization, name='localization_view')
+    path(
+        'localization/',
+        LocalizationView.as_view(),
+        name='localization_view'
+    )
 ]
