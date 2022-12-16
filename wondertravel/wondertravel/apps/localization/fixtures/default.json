@@ -1,0 +1,29 @@
+[
+  {
+    "model": "localization.Antenna",
+    "pk": 1,
+    "fields": {
+        "name": "wonderfulAntena1",
+        "x_localization": "-25",
+        "y_localization": "-10"
+    }
+  },
+  {
+    "model": "localization.Antenna",
+    "pk": 2,
+    "fields": {
+        "name": "wonderfulAntena2",
+        "x_localization": "5",
+        "y_localization": "-5"
+    }
+  },
+  {
+    "model": "localization.Antenna",
+    "pk": 3,
+    "fields": {
+        "name": "wonderfulAntena3",
+        "x_localization": "25",
+        "y_localization": "5"
+    }
+  }
+]
