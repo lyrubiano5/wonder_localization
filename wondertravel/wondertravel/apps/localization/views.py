@@ -1,6 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.status import HTTP_200_OK
+from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED
 
 from .serializers import AntennaSerializer, OutputSerializer
 from .services import (
@@ -45,7 +45,7 @@ class LocalizationPart(APIView):
         serializer.is_valid(raise_exception=True)
         message_obj = MessageReceivedByPart()
         message_obj.create_message(serializer.data)
-        return Response("Message created", HTTP_200_OK)
+        return Response("Message created", HTTP_201_CREATED)
 
     def get(self, request, antenna):
         data_ = dict(
