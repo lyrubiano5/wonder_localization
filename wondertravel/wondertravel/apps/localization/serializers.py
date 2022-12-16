@@ -11,4 +11,7 @@ class AntennaSerializer(serializers.Serializer):
     message = StringListField()
 
 
+class OutputSerializer(serializers.Serializer):
+    position = serializers.DictField()
+    message = serializers.CharField()
 

@@ -13,3 +13,5 @@ class Message(models.Model):
     antenna = models.ForeignKey(Antenna, on_delete=models.CASCADE)
     message = models.CharField(max_length=50)
     distance = models.IntegerField()
+    created_at = models.DateTimeField()
+
