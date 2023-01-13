@@ -1,0 +1,21 @@
+version: "3.9.7"
+services:
+  web:
+    build: .
+    ports: 
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: hello_django
+      POSTGRES_USER: hello_django
+      POSTGRES_DB: hello_django_dev
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
