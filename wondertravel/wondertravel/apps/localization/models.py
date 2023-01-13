@@ -15,3 +15,4 @@ class Message(models.Model):
     distance = models.IntegerField()
     created_at = models.DateTimeField()
 
+
